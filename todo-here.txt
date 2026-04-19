@@ -1,0 +1,17 @@
+ few concrete improvements
+Fix static fields and wiring
+Make tasksList non‑static: private ObservableList<TaskClass> tasksList; (no static), and newTask probably doesn’t need to be a field at all.
+Remove unused imports like java.awt.*, java.awt.Dialog, IOError, ResourceBundle.
+Better validation / UX in the dialog
+Disable the Add button until the user types a non‑blank task name, instead of silently using the fallback.
+Show a small error Label under the text field when validation fails instead of printing to console.
+Give the dialog a proper title and maybe default focus on the name text field.
+Clearer behaviors
+On Cancel, make sure you return null and maybe log “Dialog cancelled” so you can distinguish it from validation failures.
+After a successful add, clear the dialog fields so if you reopen it they’re empty.
+Task model niceties
+Override toString() in TaskClass for easier debugging logs.
+Consider adding LocalDateTime createdAt or a “done at” timestamp, then display it in TaskBars.
+Minor UI polish
+Rename addBtnDialog text to something like “Add Task”.
+Style TaskBars (colors per priority, hover effects, etc.) to visually differentiate priorities.

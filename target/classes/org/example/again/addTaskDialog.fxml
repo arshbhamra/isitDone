@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.again.addTaskDialog">
+   <children>
+      <DialogPane layoutX="29.0" layoutY="79.0" prefHeight="222.0" prefWidth="543.0">
+         <graphic>
+            <VBox prefHeight="200.0" prefWidth="525.0">
+               <children>
+                  <Label fx:id="labelTaskName" text="task Name:" />
+                  <TextField fx:id="tasknameTF" prefHeight="36.0" prefWidth="165.0" promptText="enter name" />
+                  <Label fx:id="labelTaskDesc" text="task Desc: " />
+                  <TextField fx:id="taskdescTF" prefHeight="35.0" prefWidth="150.0" promptText="enter desc" />
+                  <Label fx:id="labelTaskPri" text="task Priority:" />
+                  <ComboBox fx:id="priorityTypeCB" prefWidth="150.0" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAdd" text="Add Task" />
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+               </children>
+            </VBox>
+         </graphic>
+      </DialogPane>
+   </children>
+</AnchorPane>
